@@ -215,17 +215,17 @@ PrefabInstance:
     - target: {fileID: 4802279850349901120, guid: 26ebf3ada21a94c3fa7ce9ca0a14cd81,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4802279850349901120, guid: 26ebf3ada21a94c3fa7ce9ca0a14cd81,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4802279850349901120, guid: 26ebf3ada21a94c3fa7ce9ca0a14cd81,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.19
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4802279850349901120, guid: 26ebf3ada21a94c3fa7ce9ca0a14cd81,
         type: 3}
@@ -265,6 +265,11 @@ PrefabInstance:
     - target: {fileID: 4802279850349901120, guid: 26ebf3ada21a94c3fa7ce9ca0a14cd81,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802279850349901123, guid: 26ebf3ada21a94c3fa7ce9ca0a14cd81,
+        type: 3}
+      propertyPath: useRigidbodyForVelocity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4802279850349901125, guid: 26ebf3ada21a94c3fa7ce9ca0a14cd81,
