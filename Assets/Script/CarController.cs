@@ -7,7 +7,7 @@ public class CarController : MonoBehaviour
 
     [SerializeField] float moveSpeed = 5f;
     private Rigidbody2D rb;
-    public BoxCollider2D collider2D;
+    //public BoxCollider2D collider2D;
     Vector2 movement;
     public float movementX;
     public float movementY;
@@ -16,7 +16,7 @@ public class CarController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        collider2D = GetComponent<BoxCollider2D>();
+        //collider2D = GetComponent<BoxCollider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -37,8 +37,54 @@ public class CarController : MonoBehaviour
         }
         else
         {
-
+            if (collision.gameObject.CompareTag("Hole") || collision.gameObject.CompareTag("Car"))
+            {
+                stopCar();
+            }
         }
+
+        switch (collision.gameObject.tag)
+        {
+            case "DirectionSetterLeft":
+                setLeftDirection();
+                break;
+            case "DirectionSetterRight":
+                setRightDirection();
+                break;
+            case "DirectionSetterUp":
+                setUpDirection();
+                break;
+            case "DirectionSetterDown":
+                setDownDirection();
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    public void setLeftDirection()
+    {
+        movementX = -1;
+        movementY = 0;
+    }
+
+    public void setUpDirection()
+    {
+        movementX = 0;
+        movementY = 1;
+    }
+
+    public void setRightDirection()
+    {
+        movementX = 1;
+        movementY = 0;
+    }
+
+    public void setDownDirection()
+    {
+        movementX = 0;
+        movementY = -1;
     }
 
     public void changeDirectionToTheRight()

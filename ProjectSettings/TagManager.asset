@@ -7,6 +7,11 @@ TagManager:
   - DirectionChangerLeft
   - DirectionChangerRight
   - Hole
+  - DirectionSetterLeft
+  - DirectionSetterRight
+  - DirectionSetterUp
+  - DirectionSetterDown
+  - Car
   layers:
   - Default
   - TransparentFX
