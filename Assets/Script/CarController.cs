@@ -11,6 +11,7 @@ public class CarController : MonoBehaviour
     Vector2 movement;
     public float movementX;
     public float movementY;
+    public ParticleSystem BoomFire;
     //public bool isDirectionReadyToChange = true;
 
     void Awake()
@@ -21,6 +22,10 @@ public class CarController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            BoomFire.Play();
+        }
         if (!collision.gameObject.CompareTag("Hole"))
         {
             if (collision.gameObject.CompareTag("DirectionChangerRight"))
@@ -41,7 +46,7 @@ public class CarController : MonoBehaviour
             {
                 stopCar();
             }
-        }
+        } 
 
         switch (collision.gameObject.tag)
         {
