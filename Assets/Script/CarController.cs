@@ -20,6 +20,17 @@ public class CarController : MonoBehaviour
         //collider2D = GetComponent<BoxCollider2D>();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hole"))
+        {
+            gameObject.transform.parent = collision.transform;
+            //this game object . parent = collision.gameobject/transform
+            boomFire.Play();
+            stopCar();
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -42,8 +53,9 @@ public class CarController : MonoBehaviour
                 }
             }
         }
-        if (collision.gameObject.CompareTag("Hole") || collision.gameObject.CompareTag("Car"))
+        if (collision.gameObject.CompareTag("Car"))
         {
+            gameObject.transform.parent = collision.transform;
             boomFire.Play();
             stopCar();
         }
