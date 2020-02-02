@@ -25,6 +25,8 @@ public class CarController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             BoomFire.Play();
+            GetComponent<Rigidbody2D>().isKinematic = true;
+            stopCar();
         }
         if (!collision.gameObject.CompareTag("Hole"))
         {
