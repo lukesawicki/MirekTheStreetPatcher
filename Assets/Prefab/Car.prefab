@@ -100,7 +100,7 @@ MonoBehaviour:
   moveSpeed: 5
   movementX: -1
   movementY: 0
-  BoomFire: {fileID: 9121712127182488161}
+  boomFire: {fileID: 9121712127182488161}
 --- !u!50 &3896010197046706881
 Rigidbody2D:
   serializedVersion: 4
