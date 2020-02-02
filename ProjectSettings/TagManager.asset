@@ -12,6 +12,7 @@ TagManager:
   - DirectionSetterUp
   - DirectionSetterDown
   - Car
+  - HoleSpawner
   layers:
   - Default
   - TransparentFX
